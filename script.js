@@ -1,8 +1,6 @@
+let fontPositionArr = [];
 
-
-
-
-setFontPosition = () => {
+initFontPosition = () => {
   const graphic_font = document.querySelectorAll('.graphic-font');
 
   graphic_font.forEach(el => {
@@ -12,8 +10,6 @@ setFontPosition = () => {
     el.style.left = pos_x+"vw";
     el.style.top = pos_y+"vh";
   })
-
-  // moveFontPosition();
 }
 
 moveFontPosition = () => {
@@ -34,44 +30,83 @@ moveFontPosition = () => {
   },10000)
 }
 
-setVariable = () => {
-  var style = document.createElement('style');
-  style.type = 'text/css';
-  var keyFrames = `\
-  @-webkit-keyframes test {\
-    0% {\
-        -webkit-transform: rotate(A_DYNAMIC_VALUE);\
-    }\
-  }\
-  @-moz-keyframes test {\
-    100% {\
-        -webkit-transform: rotate(A_DYNAMIC_VALUE);\
-    }\
-  }\
-  @keyframes testanimtaion {\
-    0% {\
-        opcity: 0;\
-    }\
-      100% {\
-        opcity: 1;\
-    }\
-  }`;
-
-
-  style.innerHTML = keyFrames.replace(/A_DYNAMIC_VALUE/g, "180deg");
-  document.getElementsByTagName('head')[0].appendChild(style);
-
-
-  const test = document.querySelector('.test');
-  test.style.animation = 'testanimtaion 1s infinite alternate ease-in-out';
+initVariableFont = () => {
+  console.log('-initVariableFont-')
   
-	//animation: testanimtaion 1s infinite alternate ease-in-out;
+  const graphic_font = document.querySelectorAll('.graphic');
+  graphic_font.forEach(el => {
+
+    const rand_wght = parseInt(Math.random() * 100);
+    const rand_wdth = parseInt(Math.random() * 100);
+    const rand_ital = parseInt(Math.random() * 100);
+
+    const temp_pos = {"wght": rand_wght, "wdth": rand_wdth,"ital":rand_ital }
+    fontPositionArr.push(temp_pos);
+    el.style.fontVariationSettings = `'wght' ${rand_wght}, 'wdth' ${rand_wdth}, 'ital' ${rand_ital}`;
+  });
+
+
+}
+
+changeWght = () =>{
+  console.log('-changeWght-');
+
+  const graphic = document.querySelectorAll('.graphic');
+  graphic.forEach((el, index) => {
+    const rand_wght = parseInt(Math.random() * 100);
+    fontPositionArr[index].wght = rand_wght;
+    el.style.fontVariationSettings = `'wght' ${fontPositionArr[index].wght}, 'wdth' ${fontPositionArr[index].wdth}, 'ital' ${fontPositionArr[index].ital}`;
+  })
+}
+
+changeWdth = () => {
+  console.log('-changeWdth-');
+
+  const graphic = document.querySelectorAll('.graphic');
+  graphic.forEach((el, index) => {
+
+    const rand_wdth = parseInt(Math.random() * 100);
+    fontPositionArr[index].wdth = rand_wdth;
+    el.style.fontVariationSettings = `'wght' ${fontPositionArr[index].wght}, 'wdth' ${fontPositionArr[index].wdth}, 'ital' ${fontPositionArr[index].ital}`;
+
+  });
+}
+
+changeItal = () => {
+  console.log('-changeItal-');
+  const graphic = document.querySelectorAll('.graphic');
+
+  graphic.forEach((el, index) => {
+
+    const rand_ital = parseInt(Math.random() * 100);
+    fontPositionArr[index].ital = rand_ital;
+    el.style.fontVariationSettings = `'wght' ${fontPositionArr[index].wght}, 'wdth' ${fontPositionArr[index].wdth}, 'ital' ${fontPositionArr[index].ital}`;
+
+  });
+}
+
+changeFontVariable = () => {
+
+  setInterval(()=>{
+    changeWght();
+  }, 3000);
+
+  setInterval(()=>{
+    changeWdth();
+  }, 6000);
+
+  setInterval(()=>{
+    changeItal();
+  }, 9000);
 }
 
 init = () =>{
-  setFontPosition();
+  initFontPosition();
   moveFontPosition();
-  setVariable();
+  initVariableFont();
+  changeFontVariable();
+
+
 }
 
 init();

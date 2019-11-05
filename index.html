@@ -8,110 +8,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-	<style>
-		/* default */
-		*{
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			text-decoration: none;
-		}
-
-		body{
-			background-color: rgb(243, 243, 243);
-			width: 100vw;
-			height: 100vh;
-			overflow: hidden;
-		}
-
-		.con{
-			width: 70%;
-			margin: auto;
-            position: relative;
-		}
-
-		header{
-			padding: 50px 0 30px 0;
-		}
-
-		header .con{
-			border-bottom: 1px solid black;
-		}
-
-		header h1{
-			padding-bottom: 10px;
-		}
-
-		header p{
-			color: gray;
-			line-height: 1.5;
-			padding-bottom: 20px;
-		}
-
-		/* add style */
-		@font-face {
-			font-family: myFirstFont;
-			src: url(./font/wak1026GX.ttf);
-		}
-
-		.graphic-font-transition{
-			transition: all 10s linear;
-		}
-		.graphic-font{
-			transform: translate(-50%, -50%);
-			position: absolute;
-			/* transition: all 10s linear; */
-			left: 60vw;
-			top: 10vh;
-			font-family: myFirstFont;
-			font-size: 100rem;
-			font-variation-settings: 'wght' 0, 'wdth' 0, 'ital' 0;
-			text-align: center;
-			animation: wgth 3s infinite alternate ease-in-out, 
-									wdth 6s infinite alternate ease-in-out, 
-									ital 9s infinite alternate ease-in-out;
-			/* border: 1px solid black; */
-		}
-
-		@keyframes wgth{
-			from{
-				font-variation-settings: 'wght' 0;
-			}
-			to{
-				font-variation-settings: 'wght' 100;
-			}
-		}
-
-		@keyframes wdth{
-			from{
-				font-variation-settings: 'wdth' 0;
-			}
-			to{
-				font-variation-settings: 'wdth' 100;
-			}
-		}
-
-		@keyframes ital{
-			from{
-				font-variation-settings: 'ital' 0;
-			}
-			to{
-				font-variation-settings: 'ital' 100;
-			}
-		}
-
+	
+	<style name="wgh">
 
 	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+	<!-- <p class="test">test</p> -->
 	<section>
-
-		<div class="graphic-font"><p class="graphic">A</p></div>
-		<div class="graphic-font"><p class="graphic">B</p></div>
-		<div class="graphic-font"><p class="graphic">D</p></div>
+		<div class="graphic-font">
+			<p class="graphic">A</p>
+		</div>
+		<div class="graphic-font">
+			<p class="graphic">B</p>
+		</div>
+			<div class="graphic-font"><p class="graphic">D</p></div>
 		<div class="graphic-font"><p class="graphic">E</p></div>
 		<div class="graphic-font"><p class="graphic">F</p></div>
 		<div class="graphic-font"><p class="graphic">J</p></div>

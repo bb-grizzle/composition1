@@ -1,0 +1,63 @@
+/* add style */
+@font-face {
+  font-family: myFirstFont;
+  src: url(./font/wak1026GX.ttf);
+}
+
+/* default */
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  background-color: rgb(243, 243, 243);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.con{
+  width: 70%;
+  margin: auto;
+        position: relative;
+}
+
+header{
+  padding: 50px 0 30px 0;
+}
+
+header .con{
+  border-bottom: 1px solid black;
+}
+
+header h1{
+  padding-bottom: 10px;
+}
+
+header p{
+  color: gray;
+  line-height: 1.5;
+  padding-bottom: 20px;
+}
+
+
+.graphic-font-transition{
+  transition: all 10s ease-in-out;
+}
+.graphic-font{
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  font-family: myFirstFont;
+  font-size: 80rem;
+  text-align: center;
+}
+
+.graphic{
+  font-variation-settings: 'wght' 0, 'wdth' 0, 'ital' 0;
+  transition: all 3s ease-in-out;
+}
