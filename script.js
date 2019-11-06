@@ -105,8 +105,6 @@ init = () =>{
   moveFontPosition();
   initVariableFont();
   changeFontVariable();
-
-
 }
 
 init();
