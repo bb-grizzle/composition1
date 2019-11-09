@@ -17,15 +17,14 @@
 
 <body>
 	
-	<section>
+	<section class="wrap">
 		<div class="graphic-font"><p class="graphic">A</p></div>
-<!-- 		
 		<div class="graphic-font"><p class="graphic">B</p></div>
 		<div class="graphic-font"><p class="graphic">C</p></div>
 		<div class="graphic-font"><p class="graphic">D</p></div>
 		<div class="graphic-font"><p class="graphic">E</p></div>
 		<div class="graphic-font"><p class="graphic">F</p></div>
-		<div class="graphic-font"><p class="graphic">G</p></div> -->
+		<div class="graphic-font"><p class="graphic">G</p></div>
 		
 	</section>
 
@@ -40,7 +39,7 @@
 		
 		<form id="admin-from">
 			<h4>speed of variable font</h4>
-			<ul>
+			<ul class="variable">
 				<li>
 					<p>wght</p>
 					<input type="range" min="1000" max="10000" value="5000" name = "wght">
@@ -56,10 +55,10 @@
 			</ul>
 
 			<h4>speed of chracter</h4>
-			<ul>
+			<ul class="fontSize">
 				<li>
-					<p>character</p>
-					<input type="range" min="1000" max="10000" value="5000" name = "char">
+					<p>font size</p>
+					<input type="range" min="0" max="100" value="80" name = "fontSize">
 				</li>
 			</ul>
 		</form>

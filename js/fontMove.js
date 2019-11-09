@@ -5,6 +5,8 @@ let speed = {
   "char" : 10000
 };
 
+let interval_move = null;
+
 initFontPosition = () => {
   const graphic_font = document.querySelectorAll('.graphic-font');
 
@@ -17,6 +19,8 @@ initFontPosition = () => {
   })
 }
 
+
+
 moveFontPosition = () => {
   const graphic_font = document.querySelectorAll('.graphic-font');
 
@@ -24,7 +28,8 @@ moveFontPosition = () => {
     el.classList.add('graphic-font-transition');
   })
 
-  setInterval(()=>{
+  interval_move = setInterval(()=>{
+    console.log('move');
     graphic_font.forEach(el => {
       const pos_x = parseInt(Math.random() * 90);
       const pos_y = parseInt(Math.random() * 90);

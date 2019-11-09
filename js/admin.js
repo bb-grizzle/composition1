@@ -15,37 +15,45 @@ handleSettingClick = () => {
 }
 
 handleChangeValue = () => {
-  console.log('-handleChangeValue-');
-  console.log(speed);
   const form = document.querySelector('#admin-from');
   console.log(form);
-  form.querySelectorAll('input').forEach(el=>{
-    console.log(el);
+  const variableForm = form.querySelector('.variable');
+  variableForm.querySelectorAll('input').forEach(el=>{
     el.addEventListener('change', ()=> {
       const temp_name = el.name;
       speed[temp_name] = el.value;
 
-      console.dir(interval_wght);
-      clearInterval(interval_wght);
-      clearInterval(interval_wdth);
-      clearInterval(interval_ital);
-      
+      interval.forEach(el => {
+        clearInterval(el.wght);
+        clearInterval(el.wdth);
+        clearInterval(el.ital);
+      })
       handleVariable();
-
     })
   })
   
 }
 
-changeFontVariable = () => {
-  console.log('-changeFontVariable-');
+handleChangeMove = () => {
+  const form = document.querySelector('#admin-from');
+  const target = form.fontSize;
+  target.addEventListener('change', ()=>{
+    console.log('test');
+    console.log(target.value);
+    const graphic = document.querySelectorAll('.graphic');
 
+    console.log(graphic);
+    graphic.forEach(el=>{
+      el.style.fontSize = target.value + "rem";
+    })
+  })
 }
 
 
 init = () => {
   handleSettingClick();
   handleChangeValue();
+  handleChangeMove();
 }
 
 init();

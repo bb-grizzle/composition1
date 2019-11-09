@@ -7,6 +7,8 @@ let interval_wght = null;
 let interval_wdth = null;
 let interval_ital = null;
 
+let interval = []
+
 let timer = {
   wght: null,
   wdth: null,
@@ -14,9 +16,9 @@ let timer = {
 }
 
 handleFont = (el, i) => {
+
   // handle wght
-  interval_wght = setInterval(() => {
-    console.log('handle wght')
+  interval[i].wght = setInterval(() => {
     const start = Date.now();
     new_val[i].wght = parseInt(Math.random()*100);
     const pre = fontPositionArr[i].wght;
@@ -24,8 +26,7 @@ handleFont = (el, i) => {
   }, speed.wght);
 
   // handle wdth
-  interval_wdth = setInterval(() => {
-    console.log('handle wdth')
+  interval[i].wdth = setInterval(() => {
     const start = Date.now();
 
     new_val[i].wdth = parseInt(Math.random()*100);
@@ -35,8 +36,7 @@ handleFont = (el, i) => {
   }, speed.wdth);
 
   // handle ital
-  interval_ital = setInterval(() => {
-    console.log('handle ital')
+  interval[i].ital = setInterval(() => {
     const start = Date.now();
 
     new_val[i].ital = parseInt(Math.random()*100);
@@ -109,16 +109,14 @@ handleVariable = () => {
   })
 }
 
-
-
 function easeInOut(t, b, c, d) {
-  //  t: current time/currnet step
-  //  b: starting position
-  //  c: amount of change (end - start)
-  //  d: total animation time/steps
-    if ((t/=d/2) < 1) return c/2*t*t*t + b;
-    return c/2*((t-=2)*t*t + 2) + b;
-  }
+//  t: current time/currnet step
+//  b: starting position
+//  c: amount of change (end - start)
+//  d: total animation time/steps
+  if ((t/=d/2) < 1) return c/2*t*t*t + b;
+  return c/2*((t-=2)*t*t + 2) + b;
+}
 
 initVariableFont = () => {
   const graphic_font = document.querySelectorAll('.graphic');
@@ -138,7 +136,13 @@ initVariableFont = () => {
       "wdth": 0,
       "ital": 0
     }
+    const interval_object = {
+      "wght": null,
+      "wdth": null,
+      "ital": null
+    }
     new_val.push(new_val_object);
+    interval.push(interval_object);
     fontPositionArr.push(temp_pos);
 
     drawFont(el, rand_wght, rand_wdth, rand_ital);

@@ -53,7 +53,6 @@ header p{
   left: 50vw;
   top: 50vh;
   font-family: myFirstFont;
-  font-size: 80rem;
   text-align: center;
   color: white;
   mix-blend-mode: difference;
@@ -61,7 +60,7 @@ header p{
 
 .graphic{
   font-variation-settings: 'wght' 0, 'wdth' 0, 'ital' 0;
-  /* transition: all 3s ease-in-out; */
+  font-size: 80rem;
 }
 
 
@@ -78,10 +77,11 @@ header p{
   z-index: 100;
   right: 20px;
   top: 20px;
-  /* opacity: 0; */
+  opacity: 0;
+  transition: all .3s ease-in-out;
 }
 .ic_setting:hover{
-  /* opacity: 1; */
+  opacity: 1;
 }
 
 .admin{
@@ -92,6 +92,7 @@ header p{
   position: absolute;
   right: 0;
   transform: translateX(100%);
+  transition: all .3s ease-in-out;
 }
 
 .admin_show{
