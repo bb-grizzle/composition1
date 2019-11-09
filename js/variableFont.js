@@ -156,6 +156,17 @@ drawFont = (el, wght, wdth, ital) => {
 init = () => {
   initVariableFont();
   handleVariable();
+
+  setInterval(() => {
+    console.log('clear');
+    interval.forEach(el => {
+      clearInterval(el.wght);
+      clearInterval(el.wdth);
+      clearInterval(el.ital);
+    })
+
+      handleVariable();
+  }, 10000);
 }
 
 init();

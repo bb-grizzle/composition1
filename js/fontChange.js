@@ -31,12 +31,13 @@ changeFont = () => {
   const char_arr = document.querySelectorAll('.graphic');
   const char_arr_rand = changeFontChar();
   char_arr.forEach((el, index) => {
+    console.dir(el);
     el.innerHTML = char_arr_rand[index];
   })
 }
 
 handleFont = () => {
-  setInterval(changeFont, 10000);
+  setInterval(changeFont, 30000);
 }
 
 init = () => {

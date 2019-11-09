@@ -1,7 +1,7 @@
 let speed = {
-  "wght" : 3000,
-  "wdth" : 3000,
-  "ital" : 3000,
+  "wght" : 2000,
+  "wdth" : 4000,
+  "ital" : 6000,
   "char" : 10000
 };
 
@@ -37,6 +37,7 @@ moveFontPosition = () => {
       el.style.left = pos_x+"vw";
       el.style.top = pos_y+"vh";
     })
+    
   },speed.char)
 }
 
