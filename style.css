@@ -22,7 +22,7 @@ body{
 .con{
   width: 70%;
   margin: auto;
-        position: relative;
+  position: relative;
 }
 
 header{
@@ -55,25 +55,71 @@ header p{
   font-family: myFirstFont;
   font-size: 80rem;
   text-align: center;
-
   color: white;
   mix-blend-mode: difference;
 }
 
 .graphic{
   font-variation-settings: 'wght' 0, 'wdth' 0, 'ital' 0;
-  transition: all 3s ease-in-out;
+  /* transition: all 3s ease-in-out; */
 }
 
-.test{
-  font-size: 5rem;
-  position: absolute;
-  left: 0;
-  top: 0;
+
+/* admin */
+
+.ic{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.ic_setting{
   color: white;
-  mix-blend-mode: difference
+  position: absolute;
+  z-index: 100;
+  right: 20px;
+  top: 20px;
+  /* opacity: 0; */
+}
+.ic_setting:hover{
+  /* opacity: 1; */
 }
 
-.test2{
-  left: 50px;
+.admin{
+  background-color: white;
+  display: inline-block;
+  padding: 20px;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+}
+
+.admin_show{
+  transform: translateX(0);
+}
+
+.admin h4{
+  text-transform: capitalize;
+  font-weight: 400;
+  border-top: 1px solid rgb(177, 177, 177);
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.admin ul{
+  padding-bottom: 20px;
+}
+
+.admin h4:first-child{
+  border-top: none;
+}
+
+.admin li{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.admin li p{
+  margin-right: 20px;
 }

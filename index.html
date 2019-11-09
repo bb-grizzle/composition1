@@ -16,23 +16,61 @@
 </head>
 
 <body>
-	<!-- <p class="test">test</p>
-	<p class="test test2">test</p> -->
 	
 	<section>
-		<div class="graphic-font">
-			<p class="graphic">A</p>
-		</div>
-		<div class="graphic-font">
-			<p class="graphic">B</p>
-		</div>
-			<div class="graphic-font"><p class="graphic">D</p></div>
+		<div class="graphic-font"><p class="graphic">A</p></div>
+<!-- 		
+		<div class="graphic-font"><p class="graphic">B</p></div>
+		<div class="graphic-font"><p class="graphic">C</p></div>
+		<div class="graphic-font"><p class="graphic">D</p></div>
 		<div class="graphic-font"><p class="graphic">E</p></div>
 		<div class="graphic-font"><p class="graphic">F</p></div>
-		<div class="graphic-font"><p class="graphic">J</p></div>
+		<div class="graphic-font"><p class="graphic">G</p></div> -->
+		
 	</section>
 
-	<script src="script.js"></script>
+	<div class="ic_setting ic">
+		<img src="src/_ionicons_svg_md-settings.svg" alt="setting">
+	</div>
+
+	<section class="admin">
+		<div class="ic_close ic">
+			<img src="src/_ionicons_svg_md-close.svg" alt="setting">
+		</div>
+		
+		<form id="admin-from">
+			<h4>speed of variable font</h4>
+			<ul>
+				<li>
+					<p>wght</p>
+					<input type="range" min="1000" max="10000" value="5000" name = "wght">
+				</li>
+				<li>
+					<p>wdth</p>
+					<input type="range" min="1000" max="10000" value="5000" name = "wdth">
+				</li>
+				<li>
+					<p>ital</p>
+					<input type="range" min="1000" max="10000" value="5000" name = "ital">
+				</li>
+			</ul>
+
+			<h4>speed of chracter</h4>
+			<ul>
+				<li>
+					<p>character</p>
+					<input type="range" min="1000" max="10000" value="5000" name = "char">
+				</li>
+			</ul>
+		</form>
+	</section>
+
+	
+	<script src="js/fontMove.js"></script>
+	<!-- <script src="js/fontChange.js"></script> -->
+	<script src="js/variableFont.js"></script>
+	<script src="js/admin.js"></script>
+	
 </body>
 
 </html>
