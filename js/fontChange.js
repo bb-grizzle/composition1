@@ -34,14 +34,16 @@ changeFont = () => {
   char_arr.forEach((el, index) => {
     el.innerHTML = char_arr_rand[index];
   })
+  clearAllInterval();
+  handleVariable();
 }
 
-handleFont = () => {
+handleFontChange = () => {
   setInterval(changeFont, 20000);
 }
 
 init = () => {
-  handleFont();
+  handleFontChange();
 }
 
 init();

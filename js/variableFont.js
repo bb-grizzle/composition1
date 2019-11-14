@@ -11,6 +11,7 @@ let interval = [];
 handleFont = (el, i) => {
   console.log('handleFont');
     // handle wght
+  
   interval[i].wght = setInterval(() => {
     const start = Date.now();
 
