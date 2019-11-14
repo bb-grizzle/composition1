@@ -1,9 +1,4 @@
-let speed = {
-  "wght" : 2000,
-  "wdth" : 4000,
-  "ital" : 6000,
-  "char" : 10000
-};
+
 
 let interval_move = null;
 

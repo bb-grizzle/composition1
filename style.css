@@ -4,6 +4,19 @@
   src: url(./font/wak1026GX.ttf);
 }
 
+html{
+  font-size: 16px;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 /* default */
 *{
   margin: 0;
@@ -43,13 +56,12 @@ header p{
   padding-bottom: 20px;
 }
 
-
-.graphic-font-transition{
-  transition: all 10s ease-in-out;
-}
 .graphic-font{
   transform: translate(-50%, -50%);
   position: absolute;
+  display: inline-block;
+
+  transition: left 10s ease-in-out, top 10s ease-in-out;
   left: 50vw;
   top: 50vh;
   font-family: myFirstFont;
@@ -60,7 +72,8 @@ header p{
 
 .graphic{
   font-variation-settings: 'wght' 0, 'wdth' 0, 'ital' 0;
-  font-size: 80rem;
+  font-size: 50rem;
+  /* transition: all 0.1s ease-in-out; */
 }
 
 
@@ -71,6 +84,7 @@ header p{
   height: 40px;
   cursor: pointer;
 }
+
 .ic_setting{
   color: white;
   position: absolute;
@@ -90,6 +104,7 @@ header p{
   padding: 20px;
   height: 100vh;
   position: absolute;
+  top: 0;
   right: 0;
   transform: translateX(100%);
   transition: all .3s ease-in-out;
@@ -123,4 +138,16 @@ header p{
 
 .admin li p{
   margin-right: 20px;
+}
+
+@media all and (max-width: 960px){
+  html{
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 600px){
+  html{
+    font-size: 8px;
+  }
 }

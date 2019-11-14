@@ -23,12 +23,9 @@ handleChangeValue = () => {
       const temp_name = el.name;
       speed[temp_name] = el.value;
 
-      interval.forEach(el => {
-        clearInterval(el.wght);
-        clearInterval(el.wdth);
-        clearInterval(el.ital);
-      })
+      clearAllInterval();
       handleVariable();
+
     })
   })
   

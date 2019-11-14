@@ -1,13 +1,15 @@
+const char_arr = document.querySelectorAll('.graphic');
 
 changeFontChar = () => {
   console.log('-changeFontChar-');
   const char_arr = ["A","B","C","D","E","F","G","H", "I","J","K","L","M","N","O", "P", "Q","R", "S", "T","U","V","W"];
   const char_show_arr = [];
-  const char_count = 7;
+  const char_count = char_arr.length;
   
   for(let i=0; i< char_count; i++){
     const numb_rand = parseInt(Math.random()*char_arr.length);
-    if(!sameNum(numb_rand)){
+    
+    if(!sameNum(char_show_arr[numb_rand])){
       char_show_arr.push(char_arr[numb_rand]);
     }else{
       i--;
@@ -28,16 +30,14 @@ changeFontChar = () => {
 
 changeFont = () => {
   console.log('test');
-  const char_arr = document.querySelectorAll('.graphic');
   const char_arr_rand = changeFontChar();
   char_arr.forEach((el, index) => {
-    console.dir(el);
     el.innerHTML = char_arr_rand[index];
   })
 }
 
 handleFont = () => {
-  setInterval(changeFont, 30000);
+  setInterval(changeFont, 20000);
 }
 
 init = () => {
