@@ -54,7 +54,6 @@ header p{
 
 .wrap{
   /* 1220 *2400 */
-  border: 1px solid red;
   margin: 0 auto;
   width: calc(100vh / 1.96);
   height: 100vh;
