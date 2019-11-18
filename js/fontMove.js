@@ -9,7 +9,7 @@ initFontPosition = () => {
     const pos_x = parseInt(Math.random() * 100);
     const pos_y = parseInt(Math.random() * 100);
     
-    el.style.left = pos_x+"vw";
+    el.style.left = pos_x+"%";
     el.style.top = pos_y+"vh";
   })
 }
@@ -29,7 +29,7 @@ moveFontPosition = () => {
       const pos_x = parseInt(Math.random() * 90);
       const pos_y = parseInt(Math.random() * 90);
       
-      el.style.left = pos_x+"vw";
+      el.style.left = pos_x+"%";
       el.style.top = pos_y+"vh";
     })
     
